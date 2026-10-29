@@ -1,0 +1,14 @@
+{
+	"name": "Klepto",
+	"private": true,
+	"packageManager": "pnpm@8.5.1",
+	"scripts": {
+		"dev:ext": "pnpm --filter @Klepto/extension dev",
+		"test:ext": "pnpm --filter @Klepto/extension test",
+		"build:ext": "pnpm --filter @Klepto/extension build",
+		"package:ext": "pnpm build:ext && node scripts/package-extension.mjs",
+		"release:ext": "pnpm test:ext && pnpm package:ext",
+		"dev:web": "pnpm --filter @Klepto/web dev",
+		"build:web": "pnpm --filter @Klepto/web build"
+	}
+}

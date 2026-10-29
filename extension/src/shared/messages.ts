@@ -1,0 +1,67 @@
+import type { InspectorMode, InspectorStatus, ExtractionMeta } from './types';
+
+export const MSG = {
+  ACTIVATE_INSPECTOR: 'ACTIVATE_INSPECTOR',
+  DEACTIVATE_INSPECTOR: 'DEACTIVATE_INSPECTOR',
+  EXTRACTION_COMPLETE: 'EXTRACTION_COMPLETE',
+  STATUS_UPDATE: 'STATUS_UPDATE',
+  DETECT_STACK: 'DETECT_STACK',
+  PROBE_REACT: 'PROBE_REACT',
+  COLLECT_FIBER: 'COLLECT_FIBER',
+  COLLECT_GSAP: 'COLLECT_GSAP',
+  CAPTURE_SCREENSHOT: 'CAPTURE_SCREENSHOT',
+} as const;
+
+export type ActivateInspectorMsg = {
+  type: typeof MSG.ACTIVATE_INSPECTOR;
+  mode: InspectorMode;
+  includeScreenshot: boolean;
+};
+
+export type DeactivateInspectorMsg = {
+  type: typeof MSG.DEACTIVATE_INSPECTOR;
+};
+
+export type ExtractionCompleteMsg = {
+  type: typeof MSG.EXTRACTION_COMPLETE;
+  meta: ExtractionMeta;
+};
+
+export type StatusUpdateMsg = {
+  type: typeof MSG.STATUS_UPDATE;
+  status: InspectorStatus;
+  stack?: string;
+};
+
+export type DetectStackMsg = {
+  type: typeof MSG.DETECT_STACK;
+};
+
+export type ProbeReactMsg = {
+  type: typeof MSG.PROBE_REACT;
+};
+
+export type CollectFiberMsg = {
+  type: typeof MSG.COLLECT_FIBER;
+};
+
+export type CollectGsapMsg = {
+  type: typeof MSG.COLLECT_GSAP;
+};
+
+export type CaptureScreenshotMsg = {
+  type: typeof MSG.CAPTURE_SCREENSHOT;
+  rect: { x: number; y: number; width: number; height: number };
+  dpr: number;
+};
+
+export type ExtensionMessage =
+  | ActivateInspectorMsg
+  | DeactivateInspectorMsg
+  | ExtractionCompleteMsg
+  | StatusUpdateMsg
+  | DetectStackMsg
+  | ProbeReactMsg
+  | CollectFiberMsg
+  | CollectGsapMsg
+  | CaptureScreenshotMsg;

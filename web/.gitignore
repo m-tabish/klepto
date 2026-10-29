@@ -1,0 +1,6 @@
+.vercel
+*.tsbuildinfo
+.next/ 
+.vercel
+.env*
+/public/Demo_Compressed.mp4
