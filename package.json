@@ -10,5 +10,8 @@
 		"release:ext": "pnpm test:ext && pnpm package:ext",
 		"dev:web": "pnpm --filter @Klepto/web dev",
 		"build:web": "pnpm --filter @Klepto/web build"
+	},
+	"dependencies": {
+		"next": "^15.5.15"
 	}
 }
