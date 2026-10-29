@@ -1,4 +1,4 @@
-/cav<p align="center">
+<p align="center">
   <img src="./web/public/logo.png" width="96" alt="Klepto logo" />
 </p>
 
@@ -9,11 +9,10 @@
 Klepto is an offline, privacy-first Google Chrome extension (Manifest V3) that lets you inspect, deconstruct, and copy any UI component or full webpage directly to your clipboard.
 
 Built by **Neural Nexus**.
-
-[![Klepto demo](./web/public/demo.gif)](./web/public/demo.mp4)
+ 
 
 <video controls width="100%">
-  <source src="/demo.mp4" type="video/mp4">
+  <source src="https://jnmdsnzleykaatlvuaql.supabase.co/storage/v1/object/public/video/Demo_Compressed.mp4" type="video/mp4">
 </video>
 
 ---
@@ -121,27 +120,7 @@ pnpm build:ext
 3. Click **Load unpacked** and select the `extension/dist` folder.
 
 ---
-
-## Development & Workflows
-
-```bash
-# Run extension in watch mode (Vite)
-pnpm dev:ext
-
-# Run marketing site (Next.js)
-pnpm dev:web
-
-# Run tests
-pnpm test:ext
-
-# Package release zip (runs tests, builds, and creates artifacts/klepto-extension-vX.Y.Z.zip)
-pnpm release:ext
-```
-
-### Release Workflow
-
-Pushing a version tag (`vX.Y.Z`) matching `extension/public/manifest.json` triggers the CI release workflow to test, build, zip, and attach the extension package to GitHub releases.
-
+ 
 ---
 
 ## Repository Structure
@@ -168,8 +147,4 @@ klepto/
 
 For a deep dive into the internal algorithms, message schemas, and extraction pipeline, see [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md).
 
----
-
-## License
-
-[MIT](./LICENSE) © Neural Nexus
+--- 
